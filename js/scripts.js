@@ -21,4 +21,5 @@ else if (eta >= 65) {
     alert("Complimenti hai più di 64 e hai diritto a uno sconto del 40%");
     let prezzoOver = (prezzoViaggio - scontoOver);
     alert("il tuo biglietto viene " + prezzoOver);
+    prezzoOver = prezzoOver.toFixed(2)
 }
