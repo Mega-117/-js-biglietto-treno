@@ -1,24 +1,29 @@
 let chilometriViaggio = prompt("Inserisci i chilometri che devi percorrere");
+console.log("chilometri " + chilometriViaggio);
 let prezzoViaggio = chilometriViaggio * 0.21;
+
 let eta = prompt("quanti anni hai ?");
 chilometriViaggio = parseInt(chilometriViaggio);
+console.log("Anni " + eta)
 
 if (isNaN(chilometriViaggio))
     alert("I chilometri inseriti non sono validi");
 
 
 eta = parseInt(eta);
-if (isNaN(eta))
-    alert("valore età non valido");
+if (isNaN(eta)) {
+    alert("valore età non valido")
+}
 
 if (eta >= 18 && eta < 65) {
+    console.log("Maggiorenne")
     alert("Sei maggiorenne");
     prezzoViaggio = prezzoViaggio.toFixed(2);
     alert("Il tuo biglitto viene " + prezzoViaggio);
 }
 
 if (eta < 18) {
-
+    console.log("Minorenne")
     const scontoMinori = (prezzoViaggio * 20) / 100;
     alert("Complimenti sei minorenne quidi hai diritto a uno sconto del 20%");
     let prezzoMinori = (prezzoViaggio - scontoMinori);
@@ -26,6 +31,7 @@ if (eta < 18) {
     alert("il tuo biglietto viene " + prezzoMinori);
 }
 if (eta >= 65) {
+    console.log("Over 65")
     const scontoOver = (prezzoViaggio * 40) / 100;
     alert("Complimenti hai più di 64 e hai diritto a uno sconto del 40%");
     let prezzoOver = (prezzoViaggio - scontoOver);
